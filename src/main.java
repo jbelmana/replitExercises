@@ -1,8 +1,8 @@
 class Main {
     public static void main(String[] args) {
-        int[] input = {3,4,5};
+        int[] input = {3, 4, 5};
         int[] result = swapEnds(input);
-        for (int item: result) {
+        for (int item : result) {
             System.out.println(item);
         }
     }
@@ -16,10 +16,10 @@ swapEnds([1, 2, 3]) → [3, 2, 1]
 swapEnds([8, 6, 7, 9, 5]) → [5, 6, 7, 9, 8]
 */
 
-    public static int [] swapEnds(int [] nums){
+    public static int[] swapEnds(int[] nums) {
         int sumNum = nums[0];
-        nums[0] = nums[nums.length-1];
-        nums[nums.lenght- 1] = sumNum;
+        nums[0] = nums[nums.length - 1];
+        nums[nums.lenght - 1] = sumNum;
         return nums;
     }
 }
@@ -29,7 +29,7 @@ swapEnds([8, 6, 7, 9, 5]) → [5, 6, 7, 9, 8]
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {3,1,2};
+        int[] nums = {3, 1, 2};
         boolean result = has12(nums);
         System.out.println(result);
     }
@@ -47,14 +47,15 @@ has12([3, 1, 4, 5, 2]) → true
     public static boolean has12(int[] nums) {
         boolean result = false;
         boolean foundOne = false;
-        for(int i = 0; i < nums.length; i++){
-            if (nums[i] == 1){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
                 foundOne = true;
             }
-            if (foundOne && nums[i] ==2){
+            if (foundOne && nums[i] == 2) {
                 result = true;
             }
-        }return result;
+        }
+        return result;
     }
 
 }
@@ -72,6 +73,7 @@ class Main {
         int result = greenTicket(a, b, c);
         System.out.println(result);
     }
+
     /*
     Exercise 3: greenTicket
     Create an integer method called greenTicket that takes in three integers, "a". "b", and "c"
@@ -81,13 +83,14 @@ class Main {
     greenTicket(2, 2, 2) → 20
     greenTicket(1, 1, 2) → 10
     */
-    public static int greenTicket(int a, int b, int c){
+    public static int greenTicket(int a, int b, int c) {
         int result = 0;
-        if(a==b && b==c){
+        if (a == b && b == c) {
             return result = 20;
-        }else if ( a== b || b==c || a==c){
+        } else if (a == b || b == c || a == c) {
             return result = 10;
-        }return result;
+        }
+        return result;
     }
 }
 
@@ -97,8 +100,8 @@ class Main {
 
 class Main {
     public static void main(String[] args) {
-        int[] a = {1,2,3};
-        int[] b = {1,2};
+        int[] a = {1, 2, 3};
+        int[] b = {1, 2};
         int result = start1(a, b);
         System.out.println(result);
     }
@@ -112,12 +115,12 @@ start1([7, 2, 3], [1]) → 1
 start1([1, 2], []) → 1
 */
 
-    public static int start1(int[] a, int[] b ) {
+    public static int start1(int[] a, int[] b) {
         int result = 0;
-        if(a[0] == 1){
-            result ++;
+        if (a[0] == 1) {
+            result++;
         }
-        if(b[0]==1){
+        if (b[0] == 1) {
             result++;
         }
         return result;
@@ -126,12 +129,13 @@ start1([1, 2], []) → 1
 
 
 -----------------------------------------
+
 class Main {
     public static void main(String[] args) {
         int start = 0;
         int end = 0;
         int[] result = fizzArray3(start, end);
-        for(int item: result){
+        for (int item : result) {
             System.out.println(item);
         }
     }
@@ -147,10 +151,10 @@ fizzArray3(11, 18) → [11, 12, 13, 14, 15, 16, 17]
 fizzArray3(1, 3) → [1, 2]
 */
 
-    public static int []fizzArray3(int start, int end){
-        int [] result = new int[end - start];
-        for(int i = 0; i<result.length; i++){
-            result[i] = start +i;
+    public static int[] fizzArray3(int start, int end) {
+        int[] result = new int[end - start];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = start + i;
         }
         return result;
     }
@@ -161,7 +165,7 @@ fizzArray3(1, 3) → [1, 2]
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {1,1,1,4,5};
+        int[] nums = {1, 1, 1, 4, 5};
         boolean result = only14(nums);
         System.out.println(result);
     }
@@ -178,8 +182,8 @@ only14([1, 1]) → true
     public static boolean only14(int[] nums) {
         boolean result = true;
 
-        for(int i = 0; i < nums.length; i++){
-            if(nums[i] != 1 && nums[i] != 4){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 1 && nums[i] != 4) {
                 result = false;
             }
         }
@@ -194,7 +198,7 @@ only14([1, 1]) → true
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {2,2,1,1,1};
+        int[] nums = {2, 2, 1, 1, 1};
         boolean result = noTriples(nums);
         System.out.println(result);
     }
@@ -212,8 +216,8 @@ noTriples([1, 1, 1, 2, 2, 2, 1]) → false
     public static boolean noTriples(int[] nums) {
         boolean result = true;
 
-        for(int i = 0; i < nums.length-2; i ++){
-            if (nums[i] == nums[i+1] && nums[i+1] == nums[i+2]){
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] && nums[i + 1] == nums[i + 2]) {
                 result = false;
             }
         }
@@ -225,7 +229,7 @@ noTriples([1, 1, 1, 2, 2, 2, 1]) → false
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {4,3};
+        int[] nums = {4, 3};
         boolean result = no23(nums);
         System.out.println(result);
     }
@@ -239,9 +243,9 @@ no23([4, 2]) → false
 no23([3, 5]) → false
 */
 
-    public static boolean no23(int[] nums){
+    public static boolean no23(int[] nums) {
         boolean result = true;
-        if(nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3){
+        if (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3) {
             result = false;
         }
         return result;
@@ -253,7 +257,7 @@ no23([3, 5]) → false
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {3,2,5,4};
+        int[] nums = {3, 2, 5, 4};
         boolean result = no14(nums);
         System.out.println(result);
     }
@@ -269,11 +273,12 @@ no14([2, 3, 4]) → false
 
     public static boolean no14(int nums[]) {
         boolean result = true;
-        for (int i = 0; i< nums.length; i++){
-            if(nums[i] == 1 || nums[i] == 4){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1 || nums[i] == 4) {
                 result = false;
             }
-        }return result;
+        }
+        return result;
     }
 }
 
@@ -281,7 +286,7 @@ no14([2, 3, 4]) → false
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {1,1,1,4,4};
+        int[] nums = {1, 1, 1, 4, 4};
         boolean result = more14(nums);
         System.out.println(result);
     }
@@ -295,15 +300,21 @@ more14([1, 4, 1, 4]) → false
 more14([1, 1]) → true
 */
 
-    public static boolean more14(int [] nums) {
+    public static boolean more14(int[] nums) {
         boolean result = false;
         int count1 = 0;
         int count4 = 0;
-        for(int counting: nums){
-            if(counting == 1){count1++;}
-            if(counting == 4){count4++;}
+        for (int counting : nums) {
+            if (counting == 1) {
+                count1++;
+            }
+            if (counting == 4) {
+                count4++;
+            }
         }
-        if(count1 > count4){result = true;}
+        if (count1 > count4) {
+            result = true;
+        }
         return result;
     }
 }
@@ -312,8 +323,8 @@ more14([1, 1]) → true
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {1,1,1,4,5,7};
-        int [] result = makeMiddle(nums);
+        int[] nums = {1, 1, 1, 4, 5, 7};
+        int[] result = makeMiddle(nums);
         for (int item : result) {
             System.out.println(item);
         }
@@ -329,9 +340,9 @@ makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
 makeMiddle([1, 2]) → [1, 2]
 */
 
-    public static int[] makeMiddle(int [] nums) {
-        int middle = nums.length /2;
-        return new int [] {nums[middle-1], nums[middle]};
+    public static int[] makeMiddle(int[] nums) {
+        int middle = nums.length / 2;
+        return new int[]{nums[middle - 1], nums[middle]};
     }
 }
 
@@ -339,12 +350,13 @@ makeMiddle([1, 2]) → [1, 2]
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {1,1,1,4,5,7};
-        int [] result = makeLast(nums);
+        int[] nums = {1, 1, 1, 4, 5, 7};
+        int[] result = makeLast(nums);
         for (int item : result) {
             System.out.println(item);
         }
     }
+
     /*
     Exercise 12: makeLast
     Create an integer array method called makeLast that takes in an integer array “nums”.
@@ -355,10 +367,10 @@ class Main {
     makeLast([1, 2]) → [0, 0, 0, 2]
     makeLast([3]) → [0, 3]
     */
-    public static int [] makeLast(int [] nums){
-        int newArrayLength = nums.length*2;
-        int[] doubleNumsArray = new int [newArrayLength];
-        doubleNumsArray[newArrayLength - 1] = nums[nums.length -1];
+    public static int[] makeLast(int[] nums) {
+        int newArrayLength = nums.length * 2;
+        int[] doubleNumsArray = new int[newArrayLength];
+        doubleNumsArray[newArrayLength - 1] = nums[nums.length - 1];
         return doubleNumsArray;
     }
 }
@@ -367,11 +379,12 @@ class Main {
 
 class Main {
     public static void main(String[] args) {
-        int[] nums = {1,1,1,4,5,7};
-        int [] result = makeEnds(nums);
+        int[] nums = {1, 1, 1, 4, 5, 7};
+        int[] result = makeEnds(nums);
         for (int item : result)
             System.out.println(item);
     }
+
     /*
     Exercise 13: makeEnds
     Create an integer array method called makeEnds that takes in an integer array “nums”.
@@ -381,10 +394,10 @@ class Main {
     makeEnds([1, 2, 3, 4]) → [1, 4]
     makeEnds([7, 4, 6, 2]) → [7, 2]
     */
-    public static int [] makeEnds(int [] nums){
+    public static int[] makeEnds(int[] nums) {
         int first = nums[0];
-        int last = nums[nums.length-1];
-        return new int[] {first,last};
+        int last = nums[nums.length - 1];
+        return new int[]{first, last};
     }
 }
 
@@ -409,13 +422,13 @@ lessBy10(1, 7, 10) → false
 lessBy10(11, 1, 7) → true
 */
 
-    public static boolean lessBy10(int a, int b, int c){
+    public static boolean lessBy10(int a, int b, int c) {
         boolean result = false;
-        if((a-b >= 10) || (a-c >= 10)){
+        if ((a - b >= 10) || (a - c >= 10)) {
             result = true;
-        }else if((b-a >= 10) || (b-c >= 10)){
+        } else if ((b - a >= 10) || (b - c >= 10)) {
             result = true;
-        }else if((c-a >= 10) || (c-b >= 10)){
+        } else if ((c - a >= 10) || (c - b >= 10)) {
             result = true;
         }
         return result;
